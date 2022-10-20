@@ -1,15 +1,10 @@
-let color = ["blue", "red" , "green", "orange"];
-let i = 0;
-function change() {
-  document.body.style.backgroundColor = color[i];
-  i++;
-  
-  if(i > color.length - 1) {
-    i = 0;  //ritorna a 0 se i > color.length
-  }
+function randomBgColor(items) {
+  let randomColor =  items[Math.floor(Math.random() * items.length)];
+  document.body.style.backgroundColor = randomColor;
 }
 
-setInterval(change, 5000);
+let color = ["blue", "red", "green", "orange"];
+setInterval(randomBgColor, 3000, color);
 
 // Change Bg color randomly
 // function changeColor(){
