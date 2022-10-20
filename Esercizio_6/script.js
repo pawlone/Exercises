@@ -5,10 +5,10 @@ let car = {
     accessori: ["displayLCD", "sedile_riscaldato"],
     venduta: true };
 
-function fromObjectToJson () {
-    let myJson = JSON.stringify(car);
+function fromObjectToJson (obj) {
+    let myJson = JSON.stringify(obj);
     return myJson;
 
 }
 
-console.log(fromObjectToJson());
+console.log(fromObjectToJson(car));
