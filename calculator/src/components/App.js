@@ -1,8 +1,18 @@
+import Container from 'react-bootstrap/Container';
+import OutputScreenRow from './outputScreenRow';
+import OutputScreen from './outputScreen';
+import CalculatorButton from './calculatorButton';
 
 function App() {
   return (
     <>
-    <h1>Hello World!</h1>
+      <Container className='mt-5'>
+          <OutputScreen>
+            <OutputScreenRow />
+            <OutputScreenRow />
+          </OutputScreen>
+      </Container>
+
 
     </>
   );
