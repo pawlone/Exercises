@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
-const CalculatorButton = (props) => {
+const CalculatorButton = ({id ,value = 0, action = () =>{}}) => {
     return (
         <Col>
-            <Button className='w-100' variant="primary">{props.value}</Button>
+            <Button id={value} className='w-100' variant="primary" onClick={() => {action(id) }}>{value}</Button>
         </Col>
     );
 }
