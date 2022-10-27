@@ -4,18 +4,14 @@ import { useState } from 'react'
 const GetTemperatureObj = (temp = 0) => {
     if (temp > 20) {
         return {
-
             color: "red",
             value: temp
-
         }
     }
     else {
         return {
-
             color: "black",
             value: temp
-
         }
     }
 }

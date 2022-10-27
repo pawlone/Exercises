@@ -6,8 +6,8 @@ import './outputScreenRow.scss'
 
 const OutputScreenRow = () => {
     return (
-            <Col lg="4" className='bg-dark'>
-                <Form.Control className='text' size="lg" type="text" plaintext readOnly />
+            <Col lg="12">
+                <Form.Control className='text bg-dark' size="lg" type="text" plaintext readOnly />
             </Col>
         
     )

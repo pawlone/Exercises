@@ -1,7 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import OutputScreenRow from './outputScreenRow';
 import OutputScreen from './outputScreen';
-import CalculatorButton from './calculatorButton';
+import CalculatorKeypad from './calculatorKeypad';
+
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
             <OutputScreenRow />
             <OutputScreenRow />
           </OutputScreen>
+          <CalculatorKeypad />
       </Container>
 
 
