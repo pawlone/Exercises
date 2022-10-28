@@ -1,7 +1,8 @@
+
 const Viewer = ({text = ""}) => {
-    return  (
+    return (
         <p>{text}</p>
     );
 }
 
-export default Viewer
+export default Viewer;

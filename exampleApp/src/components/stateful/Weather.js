@@ -85,7 +85,8 @@ const Weather = ({ temperatures = [] }) => {
                     <button className="btn btn-outline-info" onClick={incrementDegrees}>Aggiungi gradi</button>
                 </div>
                 <div className="col-12 text-center">
-                    <div className="p-2 m-2 bg-primary text-white">Temperatura media: {Math.floor(stateAvgTemperature)} °C</div>
+                    <br/>
+                    <span className="p-2 bg-primary text-white">Temperatura media: {Math.floor(stateAvgTemperature)} °C</span>
                 </div>
             </div>
         </div>
