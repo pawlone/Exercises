@@ -15,7 +15,8 @@ function App() {
   return (
     <div>
       <Wrapper>
-        <Screen><h1>hello worìjnild</h1></Screen>
+        <Screen>        <h1>hello world</h1>
+</Screen>
       </Wrapper>
 
     </div>
