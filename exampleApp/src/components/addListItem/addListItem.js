@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 
 
 const AddListItem = () => {
-    // Dichiaro le variabili di stato item e input entrambe vuote
+
     const [items, setItems] = useState([]);
     const [input, setInput] = useState('');
 
