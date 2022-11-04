@@ -1,6 +1,11 @@
 import useSWR from "swr";
+import axios from "axios";
 
-const useRest = (url, fetcher) => {
+const fetcher = (url) => {
+    return axios.get(url).then(result => result.data);
+}
+
+const useRest = (url) => {
     const {data: resultData, error} = useSWR(url, fetcher);
 
     return {

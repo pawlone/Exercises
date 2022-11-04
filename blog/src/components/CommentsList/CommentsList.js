@@ -1,19 +1,16 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import "./CommentsList.scss"
-import axios from 'axios';
 import { useState } from 'react';
 import { useRest } from '../Hooks/Hooks';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faComment } from '@fortawesome/free-regular-svg-icons'
 const url = 'https://jsonplaceholder.typicode.com/posts/';
-const fetcher = (url) => {
-    return axios.get(url).then(result => result.data);
-}
 
 
 const CommentsList = ({postId = 0}) => {
     const [isVisible, setIsVisible] = useState(false);
-    const {resultData : comments, isLoading, error} = useRest(url + postId + "/comments", fetcher);
+    const {resultData : comments, isLoading, error} = useRest(url + postId + "/comments");
     const handleClick = () => {
         if (isVisible) {
             setIsVisible(false);
@@ -26,7 +23,9 @@ const CommentsList = ({postId = 0}) => {
 
     if (!isVisible) {
         return (
-            <Button onClick={handleClick} variant="text-small border-radius-none">Mostra Commenti</Button>
+            <Button onClick={handleClick} variant="border-radius-none" className='px-0'>
+                <FontAwesomeIcon icon={faComment} />
+            </Button>
         );
     } else {
         if(error) {
@@ -37,7 +36,8 @@ const CommentsList = ({postId = 0}) => {
         } else {
             return (
                 <>
-                    <Button onClick={handleClick} variant="text-small border-radius-none">Nascondi Commenti</Button>
+                    <Button onClick={handleClick} variant="border-radius-none" className='px-0'>
+                    <FontAwesomeIcon icon={faComment} /></Button>
                     <ListGroup variant="flush">
                         {comments.map (c => {
                             return (

@@ -1,14 +1,25 @@
 .post-title {
-    font-size : 0.9rem;
+    font-size: 0.9rem;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
 
+
 .post-body {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
+
 
 .post-footer {
     font-size: 0.7rem;
 }
+
 .border-radius-none {
     border-radius: 0;
 }

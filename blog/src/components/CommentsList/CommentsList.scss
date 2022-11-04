@@ -5,5 +5,9 @@
     }
     p {
         font-size: 0.7rem;
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
+
 }
